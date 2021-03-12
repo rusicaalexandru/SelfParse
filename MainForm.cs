@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SelfParse.Colections;
+using SelfParse.FormsColection;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace SelfParse
 {
     public partial class Main : Form
     {
+        List<ParsingTemplate> list = new List<ParsingTemplate>();
         public Main()
         {
             InitializeComponent();
@@ -19,6 +22,13 @@ namespace SelfParse
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            var addPage = new AddPage(this);
+            addPage.Show();
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            //datagrid.Rows.Add("id", "site url");
 
         }
     }
